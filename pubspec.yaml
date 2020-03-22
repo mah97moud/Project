@@ -16,17 +16,22 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-
 flutter:
 
   uses-material-design: true
-  assets: 
-      - "logo.png"
-      - "facebook.png"
-      - "google.png"
-      - "twitter.png"
+
+  assets:
+   - images/logo.png
+   - images/facebook.png
+   - images/google.png
+   - images/twitter.png
+   - images/googleaccount.jpg
+   - images/coursera.png
+   - images/microsoft.jpg
+   - images/bg.png
+
   fonts:
-      - family: Segoe
-        fonts: 
-          - asset: "fonts/SegoeBold.ttf"
-          - asset: "fonts/Segoe.ttf"
+    - family: Segoe
+      fonts:
+        - asset: fonts/Segoe.ttf
+        - asset: fonts/SegoeBold.ttf

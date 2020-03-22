@@ -5,54 +5,68 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: ListView(
-          padding: EdgeInsets.symmetric(horizontal: 24.0),
-          children: <Widget>[
-            SizedBox(
-              height: 80.0,
-            ),
-            Column(
-              children: <Widget>[
-                CircleAvatar(
-                  backgroundImage: AssetImage("images/logo.png"),
-                  radius: 60,
-                  backgroundColor: Colors.white,
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 120.0,
-            ),
-            buildTextField("Username", false),
-            SizedBox(
-              height: 20,
-            ),
-            buildTextField("Password", true),
-            ButtonBar(
-              children: <Widget>[
-                FlatButton(
-                  child: Text(
-                    "Create",
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("images/bg.png"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: SafeArea(
+          child: ListView(
+            padding: EdgeInsets.symmetric(horizontal: 24.0),
+            children: <Widget>[
+              SizedBox(
+                height: 80.0,
+              ),
+              Column(
+                children: <Widget>[
+                  CircleAvatar(
+                    backgroundImage: AssetImage("images/logo.png"),
+                    radius: 60,
+                    backgroundColor: Colors.transparent,
                   ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => CreateAccount(),
+                ],
+              ),
+              SizedBox(
+                height: 40.0,
+              ),
+              buildTextField("Username", false),
+              SizedBox(
+                height: 20,
+              ),
+              buildTextField("Password", true),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(5.0, 15.0,30.0,0.0),
+                child: ButtonBar(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    FlatButton(
+                      child: Text(
+                        "Create",
                       ),
-                    );
-                  },
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => CreateAccount(),
+                          ),
+                        );
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text("Sign In"),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    ),
+                    
+                  ],
                 ),
-                RaisedButton(
-                  child: Text("Sign In"),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                ),
-              ],
-            ),
-          ],
+              ),
+              buildButtonBar(),
+            ],
+          ),
         ),
       ),
     );

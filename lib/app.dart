@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: _SummerTrainingTheme,
+      theme: _summerTrainingTheme,
       home: Scaffold(
         body: HomePage(),
       ),
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-final ThemeData _SummerTrainingTheme = _buildSummerTrainingTheme();
+final ThemeData _summerTrainingTheme = _buildSummerTrainingTheme();
 
 ThemeData _buildSummerTrainingTheme() {
   final ThemeData base = ThemeData.light();

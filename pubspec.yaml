@@ -29,6 +29,7 @@ flutter:
    - images/coursera.png
    - images/microsoft.jpg
    - images/bg.png
+   - assets/courses.json
 
   fonts:
     - family: Segoe
